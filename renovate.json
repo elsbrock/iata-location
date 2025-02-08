@@ -3,5 +3,56 @@
   "extends": [
     "config:recommended"
   ],
-  "enabledManagers": ["git-submodules"]
+  "enabledManagers": ["git-submodules"],
+  "schedule": [
+    "before 4am on monday"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "labels": [
+        "breaking"
+      ],
+      "matchPackageNames": [
+        "*"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "security"
+      ],
+      "labels": [
+        "security"
+      ],
+      "automerge": true,
+      "automergeType": "branch",
+      "prCreation": "immediate",
+      "matchPackageNames": [
+        "*"
+      ]
+    }
+  ],
+  "platformAutomerge": true,
+  "dependencyDashboard": true,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "rangeStrategy": "pin"
 }
