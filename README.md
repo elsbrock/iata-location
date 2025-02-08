@@ -1,6 +1,6 @@
 # `iata-location`
 
-A library for looking up airport :airport: location data by IATA code.
+A library for looking up airport ✈️ location data by IATA code.
 
 ## Synopsis
 
