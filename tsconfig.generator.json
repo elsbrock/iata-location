@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./dist-gen",
+    "rootDir": "./scripts",
+    "baseUrl": ".",
+    "paths": {
+      "types": ["src/types"]
+    }
+  },
+  "include": [
+    "scripts/**/*"
+  ]
+}

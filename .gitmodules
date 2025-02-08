@@ -1,0 +1,4 @@
+[submodule "data"]
+	path = data
+	url = https://github.com/davidmegginson/ourairports-data.git
+	shallow = true
