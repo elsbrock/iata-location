@@ -1,6 +1,6 @@
 # `iata-location`
 
-A library for looking up airport ✈️ location data by IATA code.
+A zero-dependency Javascript library for looking up airport ✈️ location data by IATA code.
 
 ## Synopsis
 
@@ -59,6 +59,7 @@ Under the hood, this library leverages [davidmegginson/ourairports-data](https:/
 
 ## Features
 
+- **Zero Dependencies:** No external dependencies, just pure Javascript.
 - **Dynamic Runtime Lookup:** Use the `lookupAirport` function to dynamically query airport data.
 - **Static Tree-Shakeable Imports:** Leverage statically imported data shards to benefit from optimized bundle sizes due to tree-shaking.
 - **Modular, Up-to-Date Data:** Utilizes Git submodules to integrate with [ourairports-data](https://github.com/davidmegginson/ourairports-data) for daily airport data updates.
@@ -167,8 +168,12 @@ main().catch(error => {
 });
 ```
 
-## Conclusion
+## Contributing
 
-The Airport Lookup Library simplifies access to airport data by merging dynamic queries with static, tree-shakeable imports. The indexing system further enhances flexibility, allowing you to import single airports, groups, or even the complete dataset — all while leveraging the latest open data from [ourairports-data](https://github.com/davidmegginson/ourairports-data).
+Contributions are welcome! Please feel free to submit a PR.
 
-Happy coding!
+## License
+
+MIT
+
+
