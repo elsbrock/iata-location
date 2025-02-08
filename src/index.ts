@@ -1,3 +1,5 @@
+import type { Airport } from './types';
+
 // Cache the dynamically imported modules keyed by their full generated paths.
 const moduleCache: { [modulePath: string]: Promise<{ [iata: string]: Airport }> } = {};
 
