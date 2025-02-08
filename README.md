@@ -1,4 +1,53 @@
-# Airport Lookup Library
+# `iata-location`
+
+A library for looking up airport :airport: location data by IATA code.
+
+## Synopsis
+
+Install via npm:
+
+```sh
+npm install iata-location
+```
+
+Lookup an airport by IATA code:
+
+```typescript
+import { lookupAirport } from "iata-location";
+
+const airport = await lookupAirport("JFK");
+console.log(airport);
+// {
+//   latitude_deg: '40.639447',
+//   longitude_deg: '-73.779317',
+//   iso_country: 'US',
+//   iso_region: 'US-NY',
+//   municipality: 'New York',
+//   iata_code: 'JFK'
+// }
+```
+
+Lookup a group of airports by prefix:
+
+```typescript
+import * as AirportsFromC from "iata-location/data/C";
+
+console.log(AirportsFromC);
+// {
+//   CAA: {
+//     latitude_deg: '14.875',
+//     longitude_deg: '-85.776108',
+//     iso_country: 'HN',
+//     iso_region: 'HN-OL',
+//     municipality: 'El Aguacate',
+//     iata_code: 'CAA'
+//   },
+//   CAB: {
+//     ...
+//   },
+//   ...
+// }
+```
 
 ## Overview
 
