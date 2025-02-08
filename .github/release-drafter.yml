@@ -1,6 +1,9 @@
-name-template: 'v$RESOLVED_VERSION'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: '$RESOLVED_VERSION'
+tag-template: '$RESOLVED_VERSION'
 categories:
+  - title: '🔄 Submodule Updates'
+    labels:
+      - 'submodule'
   - title: '🚀 Features'
     labels:
       - 'feature'
@@ -14,27 +17,24 @@ categories:
     labels:
       - 'chore'
       - 'dependencies'
+  - title: '📦 Package Updates'
+    labels:
+      - 'dependencies'
 
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions
-
-version-resolver:
-  major:
-    labels:
-      - 'major'
-  minor:
-    labels:
-      - 'minor'
-  patch:
-    labels:
-      - 'patch'
-  default: patch
+change-title-escapes: '\<*_&'
 
 template: |
-  ## Changes
-
+  ## What's Changed
   $CHANGES
+
+  ## 📦 Full Changelog
+
+  $BODY
 
   ## Contributors
 
   $CONTRIBUTORS
+
+exclude-labels:
+  - 'skip-changelog'

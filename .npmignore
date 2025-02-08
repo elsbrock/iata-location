@@ -1,3 +1,19 @@
+# Source
 src/
-data/
+scripts/
+test/
+
+# Config files
+tsconfig*.json
+.github/
+.gitignore
+.gitmodules
+renovate.json
+.release-it.json
+
+# Build artifacts
 dist-gen/
+
+# Development files
+*.test.*
+*.spec.*
