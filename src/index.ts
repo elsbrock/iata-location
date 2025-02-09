@@ -35,3 +35,5 @@ export async function lookupAirport(iata: string): Promise<Airport | undefined> 
     return undefined;
   }
 }
+
+export { Airport };
