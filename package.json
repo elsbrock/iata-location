@@ -29,7 +29,7 @@
     "url": "git+https://github.com/elsbrock/iata-location.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "@types/node": "^22.13.1",
